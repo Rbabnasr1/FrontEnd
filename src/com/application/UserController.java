@@ -29,8 +29,9 @@ public class UserController {
 	@GET
 	@Path("/")
 	@Produces(MediaType.TEXT_HTML)
-	public Response loginPage() {
+	public Response loginPage() {	
 		return Response.ok(new Viewable("/Login.jsp")).build();
+		
 	}
 
 	@GET
@@ -54,7 +55,7 @@ public class UserController {
 		HttpSession session = request.getSession();
 		Long id = (Long) session.getAttribute("id");
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/updatePosition";
-		String serviceUrl = "http://localhost:8080/FCISquare/rest/login";
+		String serviceUrl = "http://mmars-facelocation.rhcloud.com/FCISquare/rest/updatePosition";
 
 		String urlParameters = "id=" + id + "&lat=" + lat + "&long="+ lon;
 		// System.out.println(urlParameters);
@@ -83,7 +84,8 @@ public class UserController {
 	public Response showHomePage(@FormParam("email") String email,
 			@FormParam("pass") String pass) {
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/login";
-		String serviceUrl = "http://localhost:8080/FCISquare/rest/login";
+		String serviceUrl = "http://mmars-facelocation.rhcloud.com/FCISquare/rest/login";
+		//String serviceUrl = "http://localhost:8080/FCISquare/rest/login";
 
 		String urlParameters = "email=" + email + "&pass=" + pass;
 		// System.out.println(urlParameters);
@@ -121,8 +123,7 @@ public class UserController {
 	public Response showHomePage(@FormParam("name") String name,
 			@FormParam("email") String email, @FormParam("pass") String pass) {
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/signup";
-		String serviceUrl = "http://localhost:8080/FCISquare/rest/signup";
-
+		String serviceUrl = "http://mmars-facelocation.rhcloud.com/FCISquare/rest/signup";
 		String urlParameters = "name=" + name + "&email=" + email + "&pass="
 				+ pass;
 		// System.out.println(urlParameters);
@@ -145,7 +146,7 @@ public class UserController {
 			map.put("email", (String) obj.get("email"));
 
 			return Response.ok(new Viewable("/home.jsp", map)).build();
-
+						
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
