@@ -9,19 +9,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>Welcome b2a ya ${it.name} :D :D </p>
-	<p>This is should be user home page</p>
-	<p> You can show your current position on map and update your position on our database from <a href="/FCISquareApp/app/showLocation"> here</a>
+	<p>Welcome  ${it.name}  to your home page </p>
 	
-	<p>Current implemented services
-		"http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/signup ---
-		{requires: name, email, pass}"</p>
-	<p>and "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/login ---
-		{requires: name, pass}"</p>
-	<p>and "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/updatePosition ---
-		{requires: id, lat, long}"</p>
-	<p> All parameters are post parameters </p>
+  
+	<p> You can show your current position on map and update your position 
+	     on our database from <a href="/FCISquareApp/app/showLocation"> here</a>
+    <p> you can un follow a friend from <a href="/FCISquareApp/app/unfollow"> here</a>
+    <p> you can get your last position from <a href="/FCISquareApp/app/getLastPosition"> here</a>
+    <p> you can add or save a place from <a href="/FCISquareApp/app/place/addPlace"> here</a>
+    <p> Show Notifications from  <a href="/FCISquareApp/app/notification/GetAllNotifications"> here</a>
+    <p> you can check-in from  <a href="/FCISquareApp/app/checkin/checkin"> here</a>
+    <p> Show HomePage from <a href="/FCISquareApp/app/doShowHomePage"> here</a>
+    <p> Show History of actions from <a href="/FCISquareApp/app/history/showhistory"> here</a>
+   	
 	
-	<p>you should implement Follow,	UnFollow, getFollowers and getLastPositionOfUser services </p>
+      <form action = "doFollow" method = "post">
+	  <input type="text" name="id2"><br>
+	 <br>
+	<input type="submit" value = "follow" />
+
 </body>
 </html>

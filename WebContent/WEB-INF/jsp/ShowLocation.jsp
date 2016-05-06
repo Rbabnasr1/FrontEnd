@@ -68,5 +68,6 @@
 			type="hidden" name="long" /> <input type="submit"
 			value="update my current position" />
 	</form>
+	 <p> <a href="/FCISquareApp/app/home"> BACK</a>
 </body>
 </html>

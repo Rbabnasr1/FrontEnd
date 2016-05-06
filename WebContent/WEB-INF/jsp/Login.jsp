@@ -19,11 +19,12 @@
 		<h2> if you don't have an account you can signup from <a href = "/FCISquareApp/app/signUp">here</a> </h2>
 		</center>
 
-<form action = "doLogin" method = "post" >
-	
-	Email <input type="text" name = "email" /> <br>
-	Password: <input type="password" name = "pass" /> <br>
-	<input type="submit" value = "Login" />
+<form action = "doLogin" method = "post">
+
+	email : <input type = "text" name = "email" /> <br>
+	 pass : <input type = "password" name = "pass" /> <br>
+	 <br>
+	<input type="submit" value = "login" />
 
 
 </form>
